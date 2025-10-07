@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <title>Area of Triangle</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/profile">Profile</a></li>
+            <li><a href="/projects">Works</a></li>
+        </ul>
+    </nav>
+    <h1>Calculate Area of Triangle</h1>
+
+    <form action="/areaOftriangle" method="post" class="form">
+        <label for="triangle_height">Enter height:</label>
+        <input type="number" id="triangle_height" name="triangle_height" required>
+        <label for="triangle_base">Enter base:</label>
+        <input type="number" id="triangle_base" name="triangle_base" required>
+        <input type="submit" value="Convert">
+    </form>
+
+    {% if result %}
+    <p>Area of Circle: {{ result }}</p>
+    {% endif %}
+    <div class="footer">
+        <h4><a class="footer" href="/contact">Contacts</a></h4>
+    </div>
+</body>
+</html>

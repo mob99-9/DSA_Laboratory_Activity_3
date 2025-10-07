@@ -1,0 +1,120 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Monaco', monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+.intro {
+  padding-left: 10px;
+  padding-bottom: 15px;
+}
+
+h2 {
+  padding-left: 10px;
+}
+.body {
+  font-family: 'Monaco', monospace;
+  background: #ffffff;
+  padding-left: 10px;
+}
+
+/* Navbar container */
+.navbar  {
+  display: block;
+  justify-content: space-between;
+  background-color: #3b3b3b;
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Navigation links */
+.nav-links {
+  list-style: none;
+  padding-left: 100px;
+  text-align: center;
+  display: flex;
+  gap: 20rem;
+}
+
+.nav-links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1rem;
+  padding-left: 5rem;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #00bcd4;
+  transition: width 0.3s ease;
+}
+
+.nav-links li a:hover {
+  color: #00bcd4;
+}
+
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.footer {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #3b3b3b;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  font-size: 1rem;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.likes_and_dislikes {
+  padding-left: 20px;
+  padding-bottom: 15px;
+}
+
+.likes_and_dislikes_list {
+  list-style: none;
+}
+
+.contacts li {
+  padding: 10px;
+}
+
+.project_list {
+  padding-top: 10px;
+  padding-left: 10px;
+  list-style: none;
+}
+
+
+.project_list li {
+  padding: 20px;
+}
+
+.project_list li a{
+  text-decoration: none;
+}
+
+.form {
+  padding-top: 20px;
+}

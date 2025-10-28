@@ -43,6 +43,16 @@ def area_triangle():
         result = (triangle_height*triangle_base)/2
     return render_template('area_triangle.html', result=result)
 
+@app.route('/infixpostfix', methods=['GET', 'POST'])
+def infix_to_postfix():
+    result = None
+    if request.method == 'POST':
+        import stack_shunting_yard_algo
+        algo = stack_shunting_yard_algo
+        user_infix = request.form.get('user_infix', '')
+        result = algo.infix_to_postfix(user_infix)
+    return render_template('infix_postfix.html', result=result)
+
 @app.route('/contact')
 def contact():
     return render_template('contact.html')

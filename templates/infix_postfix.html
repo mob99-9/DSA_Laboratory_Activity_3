@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
-    <title>Home Page</title>
+    <title>Area of Circle</title>
 </head>
 <body>
     <nav class="navbar">
@@ -14,12 +14,18 @@
             <li><a href="/projects">Works</a></li>
         </ul>
     </nav>
-    <ul class="project_list">
-        <li><a href="/works">toUpperCase</a></li>
-        <li><a href="/areaOfcircle">Area of a Circle</a></li>
-        <li><a href="/areaOftriangle">Area of a Triangle</a></li>
-        <li><a href="/infixpostfix">Shunting Yard Algorithm</a></li>
-    </ul>
+    <h1>Infix to Postfix using Shunting Yard Algorithm</h1>
+
+    <form action="/infixpostfix" method="post" class="form">
+        <label for="user_infix">Enter Infix Expression:</label>
+        <input type="text" id="user_infix" name="user_infix" required>
+        <input type="submit" value="Convert to Postfix">
+    </form>
+    
+    {% if result %}
+    <p>Postfix Expression: {{ result }}</p>
+    {% endif %}
+
     <div class="footer">
         <h4><a class="footer" href="/contact">Contacts</a></h4>
     </div>
